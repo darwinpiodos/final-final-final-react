@@ -78,7 +78,7 @@ function NavBar()
 
                         {
                         localStorage.getItem('user-info') ?  
-                        
+                        <li>
                         <Navbar>
                             <Nav>
                                 <NavDropdown title={user && user.firstname}>
@@ -87,10 +87,11 @@ function NavBar()
                                 </NavDropdown>
                             </Nav>
                         </Navbar>
-
+                        </li>
                         :null
 
                         }
+                       
                       
                     </ul>
                 </div>
