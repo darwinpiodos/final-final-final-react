@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+body{
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* NavBar */
+
+.mlg-logo{
+  width:40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.logo-name{
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.covid-name{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.box-shadow{
+  box-shadow: 0px 3px 6px #BFC1C2;
+}
+
+
+@media screen and (max-width: 480px) {
+.logo-name{
+  display:none;
+}
+}
+
+
+
+
+/* Footer */
+  .ul-tag{
+    display: flex;
+    list-style-type: none;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .footer-main{
+    display: flex;
+    margin-top:4%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .footer-right{
+    display:flex;
   }
+
+  .hide-this{
+    visibility: hidden;
+  }
+
+
+  @media screen and (max-width: 480px) {
+   .ul-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+
+   .col-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+
+   .footer-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .bottom-col{
+    display: flex;
+    flex-direction: column;
+  }
+
+    }
+
+
+
+
+
+
+/* HomePage */
+
+.registercontainer{
+  display: none;
+
 }
+ 
+.logincontainer{
+padding-top: 3%;;
+}
+
+.overflow{
+  overflow-x: hidden;
+}
+
+
+
+
+/* ProfilePage */
+
+
+/* LoginPage */
+
+
+/* RegisterPage */
+
+
+/* ListPage */
+
+
