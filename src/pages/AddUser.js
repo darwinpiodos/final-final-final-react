@@ -2,17 +2,12 @@ import React, { useState, useEffect } from 'react';
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { useHistory,useLocation } from 'react-router-dom';
-import Swal from 'sweetalert2'
 
-function RegisterPage() {
+function AddUser() {
 
-    useEffect(()=>
-    {
-            if(localStorage.getItem('user-info'))
-            {
-                history.push("/profile")
-            }
-    })
+    
+
+
 
     const history=useHistory();
     const [firstname, setfirstName] = useState("")
@@ -83,9 +78,7 @@ function RegisterPage() {
 
         res = await res.json();
 
-        localStorage.setItem("user-info",JSON.stringify(res))
-        history.push("/profile")
-
+        history.push("/list")
     }
 
     return (
@@ -94,7 +87,7 @@ function RegisterPage() {
             <div className="container d-flex flex-column justify-content-center align-items-center">
                 <div className="card m-5 w-50" >
                     <div className="card-header">
-                        <h4>Register</h4>
+                        <h4>Add User</h4>
                     </div>
                     <div className="card-body">
 
@@ -212,6 +205,6 @@ function RegisterPage() {
         </div>
     )
 }
-export default RegisterPage;
+export default AddUser;
 
 

@@ -29,6 +29,7 @@ function NavBar()
     }
 
 
+
     return(
         <div className="container-fluid p-0 m-0 w-100">
             <nav class="navbar navbar-expand-lg navbar-light bg-light p-3 box-shadow w-100">
@@ -76,22 +77,24 @@ function NavBar()
                     }
 
 
+                    
                         {
-                        localStorage.getItem('user-info') ?  
-                        <li>
+                        localStorage.getItem('user-info') ?    
+                    
+
                         <Navbar>
                             <Nav>
-                                <NavDropdown title={user && user.firstname}>
+                                <NavDropdown title={`user-info`} className="btn btn-primary" style={{color:"white"}}>
                                 <NavDropdown.Item className="dropdown-item"onClick={logOut}>Logout</NavDropdown.Item>
                                 <NavDropdown.Item className="dropdown-item"onClick={profile}>Profile</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                         </Navbar>
-                        </li>
-                        :null
 
+                        :null
+                        
                         }
-                       
+                    
                       
                     </ul>
                 </div>

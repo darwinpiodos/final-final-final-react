@@ -5,8 +5,8 @@ import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import ProfilePage from './pages/ProfilePage';
 import List from './pages/List';
-// import EditProfile from './EditProfile';
- 
+import AddUser from './pages/AddUser';
+import EditUser from './pages/EditUser';
 
 function App() {
   return (
@@ -19,7 +19,8 @@ function App() {
             <Route  path="/register" component={RegisterPage}></Route>
             <Route  path="/profile" component={ProfilePage}></Route>
             <Route  path="/list" component={List}></Route>
-            {/* <Route  path="/editprofile/:id" component={EditProfile}></Route> */}
+            <Route  path="/add" component={AddUser}></Route>
+            <Route  path="/edituser/:id" component={EditUser}></Route>
             
           </Switch>
          </BrowserRouter>

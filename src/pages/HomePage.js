@@ -5,6 +5,10 @@ import Footer from "../components/Footer";
 
 function HomePage()
 {
+
+
+    let user= JSON.parse(localStorage.getItem('user-info'))
+    
     return(
         <div className="container-fluid p-0 m-0">
             <NavBar />
