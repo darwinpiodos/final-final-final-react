@@ -2,17 +2,12 @@ import React, { useState, useEffect } from 'react';
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { useHistory,useLocation } from 'react-router-dom';
-import Swal from 'sweetalert2'
+import swal from 'sweetalert';
+window.swal = swal;
 
 function RegisterPage() {
 
-    useEffect(()=>
-    {
-            if(localStorage.getItem('user-info'))
-            {
-                history.push("/profile")
-            }
-    })
+
 
     const history=useHistory();
     const [firstname, setfirstName] = useState("")
@@ -64,8 +59,20 @@ function RegisterPage() {
             method: 'POST',
             body: formData
           
+           
             
         });
+
+        if(result){
+            swal({
+                title: "Congratulations!",
+                text: "You're successfully registered",
+                icon: "success",
+                button: "Proceed to Profile",
+              }).then(function() {
+                window.location = "/profile";
+            });
+        };
 
       
         
@@ -81,18 +88,25 @@ function RegisterPage() {
             body:JSON.stringify(item)
         });
 
-        res = await res.json();
 
-        localStorage.setItem("user-info",JSON.stringify(res))
-        history.push("/profile")
+        
+        result = await result.json();
+
+        localStorage.setItem("user-info",JSON.stringify(result))
+
+        history.push("/profile" )
 
     }
+
+
+
+    
 
     return (
         <div className="container-fluid m-0 p-0 d-flex flex-column justify-content-center align-items-center">
             <NavBar />
             <div className="container d-flex flex-column justify-content-center align-items-center">
-                <div className="card m-5 w-50" >
+                <div className="card m-5 sm-w-50 w-80" >
                     <div className="card-header">
                         <h4>Register</h4>
                     </div>
@@ -206,6 +220,10 @@ function RegisterPage() {
 
 
                     </div>
+
+
+
+                    
                 </div>
             </div>
             <Footer />

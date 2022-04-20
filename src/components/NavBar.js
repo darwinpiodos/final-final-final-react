@@ -4,6 +4,7 @@ import '../App.css';
 import { Link, useHistory } from "react-router-dom";
 import { Navbar,Nav,NavDropdown } from 'react-bootstrap';
 import userEvent from '@testing-library/user-event';
+import '../css/NavBar.css';
 
 
 function NavBar()
@@ -13,6 +14,7 @@ function NavBar()
     
     let user= JSON.parse(localStorage.getItem('user-info'))
     const history=useHistory();
+    
 
     function logOut()
     {
@@ -23,7 +25,7 @@ function NavBar()
     function profile()
     {
       
-        history.push('/profile')
+        history.push('/profile')    
 
 
     }
@@ -32,14 +34,23 @@ function NavBar()
 
     return(
         <div className="container-fluid p-0 m-0 w-100">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light p-3 box-shadow w-100">
+            <nav class="navbar navbar-expand-lg navbar-light p-3 box-shadow w-100" style={{ 
+backgroundImage: "linear-gradient(315deg, #045de9 0%, #09c6f9 74%)"}}>
+            
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img className="mlg-logo" src={mlglogo}/></a>
-                    <a class="navbar-brand logo-name" href="#">MLGCL<br></br><span className="covid-name">COVID-19 CONTACT TRACING SYSTEM</span></a>
+                <Link to="/"><a class="navbar-brand" href="#"><img className="mlg-logo" src={mlglogo}/></a>
+                </Link>
+
+                    <Link to="/" className="mlg-name">
+                    <a class="navbar-brand logo-name"  href="#">MLGCL<br></br><span className="covid-name">COVID-19 CONTACT TRACING SYSTEM</span></a>
+                    </Link>
+
+                    
+
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                <div class="collapse navbar-collapse links-right" id="navbarNav">
+                    <div class="collapse navbar-collapse links-right" id="navbarNav">
                     <ul class="navbar-nav">
                        
 
@@ -48,12 +59,12 @@ function NavBar()
                     localStorage.getItem('user-info') ?
                     <>
                         <li class="nav-item">
-                        <Link to="/">
+                        <Link to="/" style={{textDecoration:'none'}}>
                         <a class="nav-link" href="#">Home</a>
                         </Link>
                         </li>
                         <li class="nav-item">
-                        <Link to="/profile">
+                        <Link to="/profile" style={{textDecoration:'none'}}>
                         <a class="nav-link" href="#">Profile</a>
                         </Link>
                         </li>
@@ -61,13 +72,13 @@ function NavBar()
                     :
                     <>
 
-                        <li class="nav-item">
-                        <Link to="/login">
+                        <li class="nav-item" style={{textDecoration:'none'}}>
+                        <Link to="/login" style={{textDecoration:'none'}}>
                         <a class="nav-link" href="#">Login</a>
                         </Link>
                         </li>
                         <li class="nav-item">
-                        <Link to="/register">
+                        <Link to="/register" style={{textDecoration:'none'}}>
                         <a class="nav-link" href="#">Register</a>
                         </Link>
                         </li>
@@ -84,12 +95,14 @@ function NavBar()
 
                         <Navbar>
                             <Nav>
-                                <NavDropdown title={`user-info`} className="btn btn-primary" style={{color:"white"}}>
+                                <NavDropdown title={user && user.firstname} className="btn simple-button" style={{color:"white"}}>
                                 <NavDropdown.Item className="dropdown-item"onClick={logOut}>Logout</NavDropdown.Item>
                                 <NavDropdown.Item className="dropdown-item"onClick={profile}>Profile</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                         </Navbar>
+
+
 
                         :null
                         

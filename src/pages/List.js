@@ -35,12 +35,12 @@ function List()
     return(
         <div className="container-fluid m-0 p-0">
             <NavBar/>
-                <div className="container p-5">
+                <div className="container-fluid p-5">
                     <div className="card">
                         <div className="card-header d-flex align-item-center">
                             <h4 className="">User list</h4>
                             <Link to="/add">
-                            <button className="btn btn-primary ms-4">Add User</button>
+                            <button className="btn btn-primary ms-4"><i class="fa solid fa-plus me-2"></i>Add User</button>
                             </Link>
                         </div>
 
@@ -77,10 +77,10 @@ function List()
                             <td><img style={{width:80,height:80}} src={"http://localhost:8000/" + item.image} /></td>
 
                             <td>
-                                <button onClick={()=>deleteOperation(item.id)} className='btn btn-danger'>Delete</button>
+                                <button onClick={()=>deleteOperation(item.id)} className='btn btn-danger'><i class="fa solid fa-trash me-2"></i>Delete</button>
 
                                 <Link to ={"edituser/" + item.id}>
-                                    <button className=' btn btn-primary ms-2'>Edit</button>
+                                    <button className=' btn btn-primary ms-2'><i class="fa solid fa-pen me-2"></i>Edit</button>
                                 </Link>
 
                             </td>

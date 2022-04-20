@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { useHistory,useLocation } from 'react-router-dom';
+import swal from 'sweetalert';
+window.swal = swal;
 
 function AddUser() {
 
@@ -78,7 +80,16 @@ function AddUser() {
 
         res = await res.json();
 
-        history.push("/list")
+        if(res){
+            swal({
+                title: "Good job!",
+                text: "You have successfully added a new user",
+                icon: "success",
+                button: "Proceed to User List",
+              }).then(function() {
+                window.location = "/list";
+            });
+        };
     }
 
     return (

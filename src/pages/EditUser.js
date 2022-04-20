@@ -5,6 +5,8 @@ import {useHistory, useLocation} from 'react-router-dom';
 import Footer from '../components/Footer';
 import '../App.css';
 import axios from 'axios';
+import swal from 'sweetalert';
+window.swal = swal;
 
 
 class EditUser extends Component
@@ -80,8 +82,20 @@ class EditUser extends Component
                 address: '',
                 image: '',
 
-
+                
             });
+
+
+            swal({
+                title: "Congratulations!",
+                text: "Edit Successful",
+                icon: "success",
+                button: "Proceed to Profile",
+              }).then(function() {
+                window.location = "/profile";
+            });
+
+
         }
     }
 
