@@ -39,8 +39,10 @@ function LoginPage()
         result = await result.json();
 
         localStorage.setItem("user-info",JSON.stringify(result))
-        history.push("/profile")
+        history.push("/profile");
+
         
+    if(result){
         swal({
             title: "Congratulations!",
             text: "Login Successful",
@@ -49,8 +51,22 @@ function LoginPage()
           }).then(function() {
             window.location = "/profile";
         });
+    }
+    else{
+        swal({
+            title: "Congratulations!",
+            text: "Login Successful",
+            icon: "warning",
+            button: "Proceed to Profile",
+          }).then(function() {
+            window.location = "/login";
+        });
+    }
+
+
 
     }
+
 
 
 

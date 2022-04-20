@@ -17,19 +17,19 @@ function ProfilePage()
   
     return(
         <div className="container-fluid p-0 m-0">
+                    {
+                    localStorage.getItem('user-info') ?
+                    <>
                 <NavBar/>
+
+               
+                        
             <div className="container pt-5">
          
                 <div className="card">
-                {
-                    localStorage.getItem('user-info') ?
-                    <>
-                            <h1>{user.firstname}</h1>
+                  
 
-                            </>
-                            :null
-
-                }
+                         
                     <div className="card-body">
                         <div className="row">
 
@@ -49,20 +49,25 @@ function ProfilePage()
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="profile-head">
-                                                                    <h5>
-                                                                        Kshiti Ghelani
-                                                                    </h5>
+                                                                    <h4>
+                                                                        {user.firstname} {user.middlename} {user.lastname}
+                                                                    </h4>
+                                                                    
                                                                     <h6>
-                                                                        Web Developer and Designer
+                                                                    <i class="fa solid fa-envelope me-2"></i>{user.email}
+                                                                    </h6>
+                                                                    <h6>
+                                                                    <i class="fa solid fa-phone me-2"></i>{user.phone}
+                                                                    </h6>
+                                                                    <h6>
+                                                                    <i class="fa solid fa-map me-2"></i>{user.address}
                                                                     </h6>
                                                                     
                                                             <ul class="nav nav-tabs pt-4" id="myTab" role="tablist">
                                                                 <li class="nav-item">
-                                                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">User Info</a>
                                                                 </li>
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
-                                                                </li>
+                                                                
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -83,7 +88,7 @@ function ProfilePage()
                                                                                 <label>User Id</label>
                                                                             </div>
                                                                             <div class="col-md-6">
-                                                                                <p>Kshiti123</p>
+                                                                                <p># {user.id}</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="row">
@@ -91,7 +96,7 @@ function ProfilePage()
                                                                                 <label>Name</label>
                                                                             </div>
                                                                             <div class="col-md-6">
-                                                                                <p>Darwin Piodos</p>
+                                                                                <p>{user.firstname} {user.middlename} {user.lastname}</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="row">
@@ -99,7 +104,7 @@ function ProfilePage()
                                                                                 <label>Email</label>
                                                                             </div>
                                                                             <div class="col-md-6">
-                                                                                <p>kshitighelani@gmail.com</p>
+                                                                                <p>{user.email}</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="row">
@@ -107,68 +112,40 @@ function ProfilePage()
                                                                                 <label>Phone</label>
                                                                             </div>
                                                                             <div class="col-md-6">
-                                                                                <p>123 456 7890</p>
+                                                                                <p>{user.phone}</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="row">
                                                                             <div class="col-md-6">
-                                                                                <label>Profession</label>
+                                                                                <label>Address</label>
                                                                             </div>
                                                                             <div class="col-md-6">
-                                                                                <p>Web Developer and Designer</p>
+                                                                                <p>{user.address}</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="row">
+                                                                            <div class="col-md-6">
+                                                                                <label>Gender</label>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <p>{user.gender}</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="row">
+                                                                            <div class="col-md-6">
+                                                                                <label>Birthday</label>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <p>{user.birthmonth} {user.birthday}, {user.birthyear}</p>
                                                                             </div>
                                                                         </div>
 
 
                                                             </div>
-                                                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                                                        <div class="row">
-                                                                            <div class="col-md-6">
-                                                                                <label>Experience</label>
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <p>Expert</p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row">
-                                                                            <div class="col-md-6">
-                                                                                <label>Hourly Rate</label>
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <p>10$/hr</p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row">
-                                                                            <div class="col-md-6">
-                                                                                <label>Total Projects</label>
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <p>230</p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row">
-                                                                            <div class="col-md-6">
-                                                                                <label>English Level</label>
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <p>Expert</p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row">
-                                                                            <div class="col-md-6">
-                                                                                <label>Availability</label>
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <p>6 months</p>
-                                                                            </div>
-                                                                        </div>
-                                                                <div class="row">
-                                                                    <div class="col-md-12">
-                                                                        <label>Your Bio</label><br/>
-                                                                        <p>Your detail description</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+
+                                                           
                                                         </div>
                                                     </div>
                                                 </div>
@@ -182,8 +159,16 @@ function ProfilePage()
                    
                 </div>
             </div>
+            
                 <Footer />
+
+            </>
+            :null
+
+            }
+  
         </div>
-    )
+
+  )
 }
 export default ProfilePage;

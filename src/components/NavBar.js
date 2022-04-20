@@ -34,8 +34,10 @@ function NavBar()
 
     return(
         <div className="container-fluid p-0 m-0 w-100">
-            <nav class="navbar navbar-expand-lg navbar-light p-3 box-shadow w-100" style={{ 
-backgroundImage: "linear-gradient(315deg, #045de9 0%, #09c6f9 74%)"}}>
+            <nav class="navbar navbar-expand-lg navbar-light p-3 box-shadow w-100" style={{ backgroundColor: "#ffffff",
+backgroundImage: "linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%)"}}>
+
+
             
                 <div class="container-fluid">
                 <Link to="/"><a class="navbar-brand" href="#"><img className="mlg-logo" src={mlglogo}/></a>
@@ -92,15 +94,16 @@ backgroundImage: "linear-gradient(315deg, #045de9 0%, #09c6f9 74%)"}}>
                         {
                         localStorage.getItem('user-info') ?    
                     
-
+                        <li>
                         <Navbar>
-                            <Nav>
+                            <Nav className="NavBar">
                                 <NavDropdown title={user && user.firstname} className="btn simple-button" style={{color:"white"}}>
-                                <NavDropdown.Item className="dropdown-item"onClick={logOut}>Logout</NavDropdown.Item>
-                                <NavDropdown.Item className="dropdown-item"onClick={profile}>Profile</NavDropdown.Item>
+                                <NavDropdown.Item className="dropdown-item" onClick={logOut}>Logout</NavDropdown.Item>
+                                <NavDropdown.Item className="dropdown-item" onClick={profile}>Profile</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                         </Navbar>
+                        </li>
 
 
 
