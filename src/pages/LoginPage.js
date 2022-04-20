@@ -40,6 +40,16 @@ function LoginPage()
 
         localStorage.setItem("user-info",JSON.stringify(result))
         history.push("/profile")
+        
+        swal({
+            title: "Congratulations!",
+            text: "Login Successful",
+            icon: "success",
+            button: "Proceed to Profile",
+          }).then(function() {
+            window.location = "/profile";
+        });
+
     }
 
 
