@@ -39,12 +39,12 @@ function NavBar()
 
 
             
-                <div class="container-fluid">
+                <div class="container-fluid p-3" >
                 <Link to="/"><a class="navbar-brand" href="#"><img className="mlg-logo" src={mlglogo}/></a>
                 </Link>
 
-                    <Link to="/" className="mlg-name">
-                    <a class="navbar-brand logo-name"  href="#">MLGCL<br></br><span className="covid-name">COVID-19 CONTACT TRACING SYSTEM</span></a>
+                    <Link to="/" className="mlg-name" >
+                    <a class="navbar-brand logo-name" style={{color:"#485356  "}}  href="#">MLGCL<br></br><span className="covid-name">COVID-19 CONTACT TRACING SYSTEM</span></a>
                     </Link>
 
                     
@@ -53,7 +53,7 @@ function NavBar()
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse links-right" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav align-button" style={{position:"absolute", right:"10px",padding:"20px", display:"flex"}}>
                        
 
                       

@@ -73,7 +73,7 @@ function RegisterPage() {
 
 
                 
-                window.location = "/";
+                window.location = "/profile";
             
 
             });
@@ -119,7 +119,7 @@ function RegisterPage() {
                 <h3 className='mb-3 ms-4 '>Register</h3>
 
 
-                    <div className="card-body">
+                    <div className="card-body" >
 
                         <section className='d-flex'>
                             <div className='form-group m-3' style={{ width: "50%" }}>

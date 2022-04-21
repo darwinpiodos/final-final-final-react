@@ -152,34 +152,25 @@ class EditUser extends Component
 
 
 
+                            <h6 className='pt-3 ms-2'>Birthday </h6>
+                            <div className='d-flex'> 
 
+                                <div class="form-floating m-2" style={{width:"50%"}}>
+                                    <input type="text"   name="birthmonth" onChange={this.handleInput} value={this.state.birthmonth}  className="form-control  fs-6 p-2 mb-4 pt-5 pb-3"  id="floatingInput" />
+                                    <label for="floatingInput ">Month</label>
+                                </div>
+                                
+                                <div class="form-floating m-2" style={{width:"20%"}}>
+                                    <input type="text"   name="birthday" onChange={this.handleInput} value={this.state.birthday}  className="form-control  fs-6 p-2 mb-4 pt-5 pb-3"  id="floatingInput" />
+                                    <label for="floatingInput ">Day</label>
+                                </div>
                             
-                            <div class="form-floating mb-3">
-                                <input type="text"   name="birthmonth" onChange={this.handleInput} value={this.state.birthmonth}  className="form-control  fs-6 p-2 mb-4 pt-5 pb-3"  id="floatingInput" />
-                                <label for="floatingInput ">Month</label>
-                            </div>
-
-
-
-
-
-
+                                <div class="form-floating m-2" style={{width:"30%"}}>
+                                    <input type="text"   name="birthyear" onChange={this.handleInput} value={this.state.birthyear}  className="form-control  fs-6 p-2 mb-4 pt-5 pb-3"  id="floatingInput" />
+                                    <label for="floatingInput ">Year</label>
+                                </div>
                             
-                            <div class="form-floating mb-3">
-                                <input type="text"   name="birthday" onChange={this.handleInput} value={this.state.birthday}  className="form-control  fs-6 p-2 mb-4 pt-5 pb-3"  id="floatingInput" />
-                                <label for="floatingInput ">Day</label>
-                            </div>
-
-
-
-
-
-                           
-                            <div class="form-floating mb-3">
-                                <input type="text"   name="birthyear" onChange={this.handleInput} value={this.state.birthyear}  className="form-control  fs-6 p-2 mb-4 pt-5 pb-3"  id="floatingInput" />
-                                <label for="floatingInput ">Year</label>
-                            </div>
-
+                            </div> 
 
 
 

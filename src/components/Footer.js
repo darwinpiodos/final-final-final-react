@@ -10,12 +10,12 @@ import '../App.css';
 function Footer()
 {
     return(
-        <div className="container-fluid mt-5 mb-3 w-70 d-flex">
+        <div className="container-fluid  mb-3 w-70 d-flex">
 
-            <div className="row  footer-main">
+            <div className="row w-100 footer-main">
                 
                 
-                <div className="col-lg-4 col-center">
+                <div className="col-lg-6 col-center">
                     <ul className="ul-tag ul-center">
 
                         <li>
