@@ -2,6 +2,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
+import '../css/ProfileCSS.css';
 
 
 function List()
@@ -37,14 +38,18 @@ function List()
             <NavBar/>
                 <div className="container-fluid p-5">
                     <div className="card">
-                        <div className="card-header d-flex align-item-center">
+                        <div className="card-header d-flex align-item-center p-4">
                             <h4 className="">User list</h4>
                             <Link to="/add">
-                            <button className="btn btn-primary ms-4"><i class="fa solid fa-plus me-2"></i>Add User</button>
+                            <button className="btn profile-edit-btn ms-4"><i class="fa solid fa-plus me-2"></i>Add User</button>
                             </Link>
+
+                           
+
+
                         </div>
 
-                        <div className="card-body" style={{overflowX:"auto", padding:"10px"}}>
+                        <div className="card-body p-5" style={{overflowX:"auto", padding:"10px"}}>
                         <table className="table  table-responsive" style={{fontSize:"12px", padding:"10px"}} >
 
                         <thead>
@@ -76,11 +81,13 @@ function List()
                             <td>{item.birthmonth} {item.birthday}, {item.birthyear}</td>
                             <td><img style={{width:80,height:80}} src={"http://localhost:8000/" + item.image} /></td>
 
-                            <td>
-                                <button onClick={()=>deleteOperation(item.id)} className='btn btn-danger'><i class="fa solid fa-trash me-2"></i>Delete</button>
+                            <td className="float">
+                                <button onClick={()=>deleteOperation(item.id)} className='btn list-delete-button'><i class="fa solid fa-trash me-2"></i></button>
+
+                                
 
                                 <Link to ={"edituser/" + item.id}>
-                                    <button className=' btn btn-primary ms-2'><i class="fa solid fa-pen me-2"></i>Edit</button>
+                                    <button className=' btn list-edit-button ms-3'><i class="fa solid fa-pen me-2"></i></button>
                                 </Link>
 
                             </td>

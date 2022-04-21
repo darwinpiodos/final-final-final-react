@@ -116,11 +116,12 @@ function RegisterPage() {
                 <h3 className='mb-3 text-center' ><i class="fa solid fa-user pt-3" style={{fontSize:"60px", color:"white", backgroundColor: "#abe9cd", backgroundImage: "linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%)", width:"95px", height:"95px",backgroundPosition:"center center", backgroundSize:"cover" ,textAlign:"center", borderRadius:"50%"}}></i></h3>
 
 
-                <h3 className='mb-3 ms-4 '>Register</h3>
+                <h3 className='mb-1 ms-4 '>Register</h3>
+                    <p className='mb-3 ms-4 ' style={{color:"gray", fontSize:"14px"}}>Please provide needed informations below.</p>
 
 
                     <div className="card-body" >
-
+                    <h5 className='mb-1 ms-3 mt-4 '>Basic Information</h5>
                         <section className='d-flex'>
                             <div className='form-group m-3' style={{ width: "50%" }}>
                                 <label className='form-label fs-6'>First Name</label>
@@ -151,52 +152,55 @@ function RegisterPage() {
                         </section>
 
 
-
-
-
                         <section className='form-group m-3'>
                             <label className='form-label fs-6'>Password</label>
                             <input type="password" name="password" onChange={(e) => setPassword(e.target.value)} className="form-control p-2 fs-6" placeholder="enter password"></input>
                         </section>
 
+                            <section className='form-group m-3'>
+                                <label className='form-label fs-6'>Gender</label>
+                                <input type="text" name="gender" onChange={(e) => setGender(e.target.value)} className="form-control p-2 fs-6" placeholder="enter gender"></input>
+                            </section>
 
-                        <section className='form-group m-3'>
-                            <label className='form-label fs-6'>Gender</label>
-                            <input type="text" name="gender" onChange={(e) => setGender(e.target.value)} className="form-control p-2 fs-6" placeholder="enter gender"></input>
-                        </section>
 
-                        <section className='form-group m-3'>
-                            <label className='form-label fs-6'>Month</label>
-                            <input type="text" name="birthmonth" onChange={(e) => setMonth(e.target.value)} className="form-control p-2 fs-6" placeholder="enter month"></input>
-                        </section>
 
-                        <section className='form-group m-3'>
-                            <label className='form-label fs-6'>Day</label>
-                            <input type="text" name="birthday" onChange={(e) => setDay(e.target.value)} className="form-control p-2 fs-6" placeholder="enter day"></input>
-                        </section>
 
-                        <section className='form-group m-3'>
+
+                            <h5 className='mb-1 ms-3 mt-5 '>Birthday</h5>
+                        <div className='d-flex'>
+                            
+                            <section className='form-group m-3'style={{width:"50%"}}>
+                                <label className='form-label fs-6'>Month</label>
+                                <input type="text" name="birthmonth" onChange={(e) => setMonth(e.target.value)} className="form-control p-2 fs-6" placeholder="enter month"></input>
+                            </section>
+
+                            <section className='form-group m-3' style={{width:"20%"}}>
+                                <label className='form-label fs-6'>Day</label>
+                                <input type="text" name="birthday" onChange={(e) => setDay(e.target.value)} className="form-control p-2 fs-6" placeholder="enter day"></input>
+                            </section>
+
+                        <section className='form-group m-3' style={{width:"30%"}}>
                             <label className='form-label fs-6'>Year</label>
                             <input type="text" name="birthyear" onChange={(e) => setYear(e.target.value)} className="form-control p-2 fs-6" placeholder="enter year"></input>
                         </section>
 
+                        </div>
+
 
                        
-
-                        <div className='form-group ms-3 me-3'>
-                            <label className='form-label fs-6'>Birthday</label>
-                        </div>
 
                        
 
 
                         <div className='form-group m-3'>
+                        <label className='form-label fs-6'>Mobile Number</label>
                             <input name="phone" type="text"  onChange={(e) => setPhone(e.target.value)} className="form-control fs-6 p-2" placeholder="enter primary number"></input>
                             <small style={{ color: "#0497e0", fontSize: "10px" }}>Please input your correct mobile number.</small>
                         </div>
 
 
-                        <div className='form-group m-3'>
+                        <div className='form-group m-3 mb-5'>
+                            <label className='form-label fs-6'>Complete Address</label>
                             <input type="text" name="address"  onChange={(e) => setAddress(e.target.value)} className="form-control fs-6 p-2" placeholder="enter current address"></input>
                         </div>
 

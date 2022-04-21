@@ -31,6 +31,39 @@
   justify-content: center;
 }
 
+.subhead{
+  line-height: 25px;
+
+}
+.logincontainerhover{
+  background-color: #abe9cd;
+  background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%); 
+  color:white;
+  padding:8px 40px;
+  border-radius:50px;
+}
+.logincontainerhover:hover{
+  outline: 1px solid #3eadcf;
+  background-color: #ffffff;
+background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  color:#3eadcf;
+}
+
+.registercontainerhover{
+    outline:1px solid #3eadcf ;
+    color:white;
+    padding:8px 40px;
+    border-radius:50px;
+    color:#3eadcf;
+}
+
+.registercontainerhover:hover{
+  background-color: #abe9cd;
+  background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%); 
+  color:white;
+  padding:8px 40px;
+  border-radius:50px;
+}
 
 @media screen and (max-width: 480px) {
 .logo-name{

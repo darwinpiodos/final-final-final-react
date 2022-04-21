@@ -98,10 +98,11 @@ function AddUser() {
             <div className="container d-flex flex-column justify-content-center align-items-center">
                 <div className="card m-5 w-50" >
                     <div className="card-header">
-                        <h4>Add User</h4>
+                        <h4 className='p-3'>Add User</h4>
                     </div>
                     <div className="card-body">
 
+                    <h5 className='mb-1 ms-3 mt-4 '>Basic Information</h5>
                         <section className='d-flex'>
                             <div className='form-group m-3' style={{ width: "50%" }}>
                                 <label className='form-label fs-6'>First Name</label>
@@ -132,62 +133,64 @@ function AddUser() {
                         </section>
 
 
-
-
-
                         <section className='form-group m-3'>
                             <label className='form-label fs-6'>Password</label>
                             <input type="password" name="password" onChange={(e) => setPassword(e.target.value)} className="form-control p-2 fs-6" placeholder="enter password"></input>
                         </section>
 
+                            <section className='form-group m-3'>
+                                <label className='form-label fs-6'>Gender</label>
+                                <input type="text" name="gender" onChange={(e) => setGender(e.target.value)} className="form-control p-2 fs-6" placeholder="enter gender"></input>
+                            </section>
 
-                        <section className='form-group m-3'>
-                            <label className='form-label fs-6'>Gender</label>
-                            <input type="text" name="gender" onChange={(e) => setGender(e.target.value)} className="form-control p-2 fs-6" placeholder="enter gender"></input>
-                        </section>
 
-                        <section className='form-group m-3'>
-                            <label className='form-label fs-6'>Month</label>
-                            <input type="text" name="birthmonth" onChange={(e) => setMonth(e.target.value)} className="form-control p-2 fs-6" placeholder="enter month"></input>
-                        </section>
 
-                        <section className='form-group m-3'>
-                            <label className='form-label fs-6'>Day</label>
-                            <input type="text" name="birthday" onChange={(e) => setDay(e.target.value)} className="form-control p-2 fs-6" placeholder="enter day"></input>
-                        </section>
 
-                        <section className='form-group m-3'>
+
+                            <h5 className='mb-1 ms-3 mt-5 '>Birthday</h5>
+                        <div className='d-flex'>
+                            
+                            <section className='form-group m-3'style={{width:"50%"}}>
+                                <label className='form-label fs-6'>Month</label>
+                                <input type="text" name="birthmonth" onChange={(e) => setMonth(e.target.value)} className="form-control p-2 fs-6" placeholder="enter month"></input>
+                            </section>
+
+                            <section className='form-group m-3' style={{width:"20%"}}>
+                                <label className='form-label fs-6'>Day</label>
+                                <input type="text" name="birthday" onChange={(e) => setDay(e.target.value)} className="form-control p-2 fs-6" placeholder="enter day"></input>
+                            </section>
+
+                        <section className='form-group m-3' style={{width:"30%"}}>
                             <label className='form-label fs-6'>Year</label>
                             <input type="text" name="birthyear" onChange={(e) => setYear(e.target.value)} className="form-control p-2 fs-6" placeholder="enter year"></input>
                         </section>
 
+                        </div>
+
 
                        
-
-                        <div className='form-group ms-3 me-3'>
-                            <label className='form-label fs-6'>Birthday</label>
-                        </div>
 
                        
 
 
                         <div className='form-group m-3'>
+                        <label className='form-label fs-6'>Mobile Number</label>
                             <input name="phone" type="text"  onChange={(e) => setPhone(e.target.value)} className="form-control fs-6 p-2" placeholder="enter primary number"></input>
                             <small style={{ color: "#0497e0", fontSize: "10px" }}>Please input your correct mobile number.</small>
                         </div>
 
 
-                        <div className='form-group m-3'>
+                        <div className='form-group m-3 mb-5'>
+                            <label className='form-label fs-6'>Complete Address</label>
                             <input type="text" name="address"  onChange={(e) => setAddress(e.target.value)} className="form-control fs-6 p-2" placeholder="enter current address"></input>
                         </div>
 
 
-
                         <div className="form-group">
                             <div className='card'>
-                                <div className='card-header'>
-                                    <p className='text-center fs-6 p-2'>PHOTO OF FACE</p>
-                                </div>
+                            <div className='card-header'  style={{backgroundColor: "#abe9cd", backgroundImage:" linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%)"}}>
+                            <p className='text-center fs-6 p-0 mt-3 text-dark'>PHOTO OF FACE</p>
+                            </div>
                                 <div className='card-body p-5'>
 
                                     <div className='text-center fs-6 p-2'>
@@ -202,8 +205,8 @@ function AddUser() {
                         </div>
 
 
-                        <div className='form-group m-3'>
-                            <button class="btn btn-primary w-100 fs-6 p-2" onClick={signUp} >Sign Up</button>
+                        <div className='form-group mt-4'>
+                                <button  onClick={signUp}  className='btn w-100 fs-5 p-3 mt-2' style={{ backgroundColor: "#abe9cd", backgroundImage: "linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%)", color:"white"}}>Register</button>
                         </div>
 
 

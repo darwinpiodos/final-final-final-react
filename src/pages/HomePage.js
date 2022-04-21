@@ -33,24 +33,24 @@ function HomePage()
                         Welcome to MLGCL COVID-19 Contact Tracing System!
                     </h1>
 
-                    <h6 className="subhead mt-2">
+                    <h6 className="subhead mt-4">
                         MLGCL COVID-19 Contact Tracing System is the MLGCL's unofficial contact tracing system. We aim to manage the spread of COVID-19 to keep our students, instructors and staffs safe and healthy.
                     </h6>
 
                     {/* logincontainer */}
-                    <div className="logincontainer mt-3" id="logincontainer">
+                    <div className="logincontainer mt-4" id="logincontainer">
 
                         <h6>
                             I'd like to <span className="fw-bold" style={{color:"#06ABD5"}}>login</span> as an
                         </h6>
 
-                        <div className="mt-3">
+                        <div className="mt-4 mb-4">
                             <Link to="/login">
-                            <button className="btn " style={{ backgroundColor: "#abe9cd", backgroundImage: "linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%)", color:"white",padding:"8px 40px", borderRadius:"50px"}}>Individual</button>
+                            <button className="btn logincontainerhover">Individual</button>
                             </Link>
 
                             <Link to="/login">
-                            <button className="btn ms-3" style={{ backgroundColor: "#abe9cd", backgroundImage: "linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%)", color:"white",padding:"8px 40px", borderRadius:"50px"}}>Admin</button>
+                            <button className="btn ms-3 logincontainerhover">Admin</button>
                             </Link>
                         </div>
                      
@@ -69,13 +69,13 @@ function HomePage()
                             I'd like to <span className="fw-bold" style={{color:"#06ABD5"}}>register</span> as an
                         </h6>
 
-                        <div className="mt-3">
+                        <div className="mt-4 mb-4">
                             <Link to="/register">
-                            <button className="btn register-btn" style={{outline:"1px solid #abe9cd ", color:"white",padding:"8px 40px", borderRadius:"50px", color:"#3eadcf"}}>Individual</button>
+                            <button className="btn register-btn registercontainerhover" >Individual</button>
                             </Link>
 
                             <Link to="/register">
-                            <button className="btn ms-3 register-btn" style={{outline:"1px solid #abe9cd ", color:"white",padding:"8px 40px", borderRadius:"50px", color:"#3eadcf"}}>Admin</button>
+                            <button className="btn ms-3 register-btn registercontainerhover">Admin</button>
                             </Link>
                         </div>
                      

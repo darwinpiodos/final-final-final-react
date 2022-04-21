@@ -3,7 +3,6 @@ import Footer from "../components/Footer";
 import {useHistory, useLocation, Link} from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 import '../css/ProfileCSS.css';
-import piodos from '../images/darwin-piodos.jpg';
 
 
 function ProfilePage()
