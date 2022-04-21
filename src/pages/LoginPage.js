@@ -47,7 +47,7 @@ function LoginPage()
             title: "Congratulations!",
             text: "Login Successful",
             icon: "success",
-            button: "Proceed to Profile",
+            button: "Go to Profile",
           }).then(function() {
             window.location = "/profile";
         })

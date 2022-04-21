@@ -85,7 +85,7 @@ function AddUser() {
                 title: "Good job!",
                 text: "You have successfully added a new user",
                 icon: "success",
-                button: "Proceed to User List",
+                button: "Go to User List",
               }).then(function() {
                 window.location = "/list";
             });
@@ -97,8 +97,8 @@ function AddUser() {
             <NavBar />
             <div className="container d-flex flex-column justify-content-center align-items-center">
                 <div className="card m-5 w-50" >
-                    <div className="card-header">
-                        <h4 className='p-3'>Add User</h4>
+                    <div className="card-header" style={{backgroundColor: "#abe9cd", backgroundImage:" linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%)"}}>
+                        <h4 className='p-3'>Add User <i class="fa solid fa-plus ms-2"></i></h4>
                     </div>
                     <div className="card-body">
 
