@@ -111,7 +111,7 @@ class EditUser extends Component
                 <div className='container w-100 pt-5 mt-5 d-flex align-items-center justify-content-center'>
                 <div className='card w-50 p-3'>
                     
-                        <h4 className='pt-3'>Edit User <i class="fa solid fa-pen ms-2"></i></h4>
+                        <h4 className='pt-3 ms-3'>Edit User <i class="fa solid fa-pen ms-2"></i></h4>
                    
                     <div className='card-body'>
   
@@ -119,21 +119,21 @@ class EditUser extends Component
 
                        
                             <div class="form-floating mb-3">
-                                <input type="text"   name="firstname" onChange={this.handleInput} value={this.state.firstname}  className="form-control  fs-6 p-2 mb-3 pt-5 pb-3"  id="floatingInput" />
+                                <input type="text"   name="firstname" onChange={this.handleInput} value={this.state.firstname}  className="form-control  fs-6 p-2 mb-4 pt-5 pb-3"  id="floatingInput" />
                                 <label for="floatingInput ">Email address</label>
                             </div>
 
 
                           
                             <div class="form-floating mb-3">
-                                <input type="text"   name="middlename" onChange={this.handleInput} value={this.state.middlename}  className="form-control  fs-6 p-2 mb-3 pt-5 pb-3"  id="floatingInput" />
+                                <input type="text"   name="middlename" onChange={this.handleInput} value={this.state.middlename}  className="form-control  fs-6 p-2 mb-4 pt-5 pb-3"  id="floatingInput" />
                                 <label for="floatingInput ">Middle Name</label>
                             </div>
 
 
 
                             <div class="form-floating mb-3">
-                                <input type="text"   name="lastname" onChange={this.handleInput} value={this.state.lastname}  className="form-control  fs-6 p-2 mb-3 pt-5 pb-3"  id="floatingInput" />
+                                <input type="text"   name="lastname" onChange={this.handleInput} value={this.state.lastname}  className="form-control  fs-6 p-2 mb-4 pt-5 pb-3"  id="floatingInput" />
                                 <label for="floatingInput ">Last Name</label>
                             </div>
 
@@ -143,42 +143,64 @@ class EditUser extends Component
                                 <input type="password" name="password" onChange={this.handleInput} value={this.state.password} className="form-control" />
                             </div> */}
 
-                            <div className='form-group mb-3'>
-                                <label>gender</label>
-                                <input type="text" name="gender" onChange={this.handleInput} value={this.state.gender} className="form-control" />
+                          
+                            <div class="form-floating mb-3">
+                                <input type="text"   name="gender" onChange={this.handleInput} value={this.state.gender}  className="form-control  fs-6 p-2 mb-4 pt-5 pb-3"  id="floatingInput" />
+                                <label for="floatingInput ">Gender</label>
                             </div>
 
-                            <div className='form-group mb-3'>
-                                <label>month</label>
-                                <input type="text" name="birthmonth" onChange={this.handleInput} value={this.state.birthmonth} className="form-control" />
+
+
+
+
+                            
+                            <div class="form-floating mb-3">
+                                <input type="text"   name="birthmonth" onChange={this.handleInput} value={this.state.birthmonth}  className="form-control  fs-6 p-2 mb-4 pt-5 pb-3"  id="floatingInput" />
+                                <label for="floatingInput ">Month</label>
                             </div>
 
-                            <div className='form-group mb-3'>
-                                <label>day</label>
-                                <input type="text" name="birthday" onChange={this.handleInput} value={this.state.birthday} className="form-control" />
+
+
+
+
+
+                            
+                            <div class="form-floating mb-3">
+                                <input type="text"   name="birthday" onChange={this.handleInput} value={this.state.birthday}  className="form-control  fs-6 p-2 mb-4 pt-5 pb-3"  id="floatingInput" />
+                                <label for="floatingInput ">Day</label>
                             </div>
 
-                            <div className='form-group mb-3'>
-                                <label>year</label>
-                                <input type="text" name="birthyear" onChange={this.handleInput} value={this.state.birthyear} className="form-control" />
-                            </div>
 
-                            <div className='form-group mb-3'>
-                                <label>phone</label>
-                                <input type="text" name="phone" onChange={this.handleInput} value={this.state.phone} className="form-control" />
-                            </div>
+
+
 
                            
-                            <div className='form-group mb-3'>
-                                <label>address</label>
-                                <input type="text" name="address" onChange={this.handleInput} value={this.state.address} className="form-control" />
+                            <div class="form-floating mb-3">
+                                <input type="text"   name="birthyear" onChange={this.handleInput} value={this.state.birthyear}  className="form-control  fs-6 p-2 mb-4 pt-5 pb-3"  id="floatingInput" />
+                                <label for="floatingInput ">Year</label>
                             </div>
 
+
+
+
+
                            
+                            <div class="form-floating mb-3">
+                                <input type="text"   name="phone" onChange={this.handleInput} value={this.state.phone}  className="form-control  fs-6 p-2 mb-4 pt-5 pb-3"  id="floatingInput" />
+                                <label for="floatingInput ">Mobile Number</label>
+                            </div>
+
+
+                            <div class="form-floating mb-3">
+                                <input type="text"   name="address" onChange={this.handleInput} value={this.state.address}  className="form-control  fs-6 p-2 mb-4 pt-5 pb-3"  id="floatingInput" />
+                                <label for="floatingInput ">Address</label>
+                            </div>
+
 
                             <div className='form-group'>
-                                <button onSubmit={this.updateUser} className='btn btn-primary w-100'>Update</button>
+                                <button onSubmit={this.updateUser} className='btn w-100 fs-5 p-3 mt-2' style={{ backgroundColor: "#abe9cd", backgroundImage: "linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%)", color:"white"}}>Update</button>
                             </div>
+
 
                         </form>
 

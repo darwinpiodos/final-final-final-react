@@ -79,7 +79,12 @@ function LoginPage()
 
             <div className='container-fluid mt-5 pt-5  sm-w-50 w-100  d-flex flex-column align-items-center'>
                     <div className='card col-12 col-sm-12 col-md-12 col-lg-5 p-4'>
-                        <h4 className='mb-3'>Login</h4>
+
+                        
+                        <h3 className='mb-3 text-center' ><i class="fa solid fa-user pt-3" style={{fontSize:"60px", color:"white", backgroundColor: "#abe9cd", backgroundImage: "linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%)", width:"95px", height:"95px",backgroundPosition:"center center", backgroundSize:"cover" ,textAlign:"center", borderRadius:"50%"}}></i></h3>
+
+
+                        <h3 className='mb-3 '>Login</h3>
 
                       
 
@@ -96,8 +101,9 @@ function LoginPage()
 
                       
 
+
                         <div className='form-group'>
-                            <button onClick={login} className='btn btn-primary w-100 fs-5 p-3'>Login</button>
+                                <button  onClick={login}  className='btn w-100 fs-5 p-3 mt-2' style={{ backgroundColor: "#abe9cd", backgroundImage: "linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%)", color:"white"}}>Login</button>
                         </div>
 
 

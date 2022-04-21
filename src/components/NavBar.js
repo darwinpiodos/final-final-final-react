@@ -35,7 +35,7 @@ function NavBar()
     return(
         <div className="container-fluid p-0 m-0 w-100">
             <nav class="navbar navbar-expand-lg navbar-light p-3 box-shadow w-100" style={{ backgroundColor: "#ffffff",
-backgroundImage: "linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%)"}}>
+            backgroundImage: "linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%)"}}>
 
 
             

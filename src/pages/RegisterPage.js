@@ -110,11 +110,15 @@ function RegisterPage() {
     return (
         <div className="container-fluid m-0 p-0 d-flex flex-column justify-content-center align-items-center">
             <NavBar />
-            <div className="container-fluid d-flex flex-column justify-content-center align-items-center">
-                <div className="card m-5 sm-w-50 w-80" >
-                    <div className="card-header">
-                        <h4>Register</h4>
-                    </div>
+            <div className="container d-flex flex-column justify-content-center align-items-center">
+                <div className="card m-5 p-4" style={{width:"60%"}} >
+                    
+                <h3 className='mb-3 text-center' ><i class="fa solid fa-user pt-3" style={{fontSize:"60px", color:"white", backgroundColor: "#abe9cd", backgroundImage: "linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%)", width:"95px", height:"95px",backgroundPosition:"center center", backgroundSize:"cover" ,textAlign:"center", borderRadius:"50%"}}></i></h3>
+
+
+                <h3 className='mb-3 ms-4 '>Register</h3>
+
+
                     <div className="card-body">
 
                         <section className='d-flex'>
@@ -200,8 +204,10 @@ function RegisterPage() {
 
                         <div className="form-group">
                             <div className='card'>
-                                <div className='card-header'>
-                                    <p className='text-center fs-6 p-2'>PHOTO OF FACE</p>
+                                <div className='card-header'  style={{backgroundColor: "#abe9cd", backgroundImage:" linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%)"}}>
+
+
+                                    <p className='text-center fs-6 p-0 mt-3 text-dark'>PHOTO OF FACE</p>
                                 </div>
                                 <div className='card-body p-5'>
 
@@ -217,8 +223,9 @@ function RegisterPage() {
                         </div>
 
 
-                        <div className='form-group m-3'>
-                            <button class="btn btn-primary w-100 fs-6 p-2" onClick={signUp} >Sign Up</button>
+
+                        <div className='form-group mt-4'>
+                                <button  onClick={signUp}  className='btn w-100 fs-5 p-3 mt-2' style={{ backgroundColor: "#abe9cd", backgroundImage: "linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%)", color:"white"}}>Register</button>
                         </div>
 
 
