@@ -10,9 +10,12 @@ import '../App.css';
 function Footer()
 {
     return(
-        <div className="container-fluid mt-5 mb-3">
+        <div className="container-fluid mt-5 mb-3 w-70 d-flex">
+
             <div className="row  footer-main">
-                <div className="col col-center">
+                
+                
+                <div className="col-lg-4 col-center">
                     <ul className="ul-tag ul-center">
 
                         <li>
@@ -29,7 +32,7 @@ function Footer()
                 </div>
 
 
-                <div className="col footer-right col-center bottom-col">
+                <div className="col d-flex ms-5 ">
                     <ul className="ul-tag ul-center">
                         <li>
                             <p style={{fontSize:11}}>powered by</p>
@@ -40,7 +43,7 @@ function Footer()
                     <ul className="ul-tag ul-center">
                         <li>
                             <p style={{fontSize:11}}>in partnership with</p>
-                            <div className="">
+                            <div className="d-flex">
                             <img style={{width:60}}src={hilongos} />
                             <img style={{width:60, marginLeft:30}}src={doh} />
                             <img style={{width:60, marginLeft:30}}src={leyte} />

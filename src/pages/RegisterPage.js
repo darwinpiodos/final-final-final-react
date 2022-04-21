@@ -70,11 +70,16 @@ function RegisterPage() {
                 icon: "success",
                 button: "Proceed to Profile",
               }).then(function() {
-                window.location = "/profile";
-            });
-        };
 
-      
+
+                
+                window.location = "/";
+            
+
+            });
+        }
+
+
         
    
         let item={email,password};
@@ -105,7 +110,7 @@ function RegisterPage() {
     return (
         <div className="container-fluid m-0 p-0 d-flex flex-column justify-content-center align-items-center">
             <NavBar />
-            <div className="container d-flex flex-column justify-content-center align-items-center">
+            <div className="container-fluid d-flex flex-column justify-content-center align-items-center">
                 <div className="card m-5 sm-w-50 w-80" >
                     <div className="card-header">
                         <h4>Register</h4>

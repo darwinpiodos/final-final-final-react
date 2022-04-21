@@ -1,6 +1,6 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import {useHistory, useLocation} from 'react-router-dom';
+import {useHistory, useLocation, Link} from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 import '../css/ProfileCSS.css';
 import piodos from '../images/darwin-piodos.jpg';
@@ -71,9 +71,19 @@ function ProfilePage()
                                                             </ul>
                                                         </div>
                                                     </div>
+
+
                                                     <div class="col-md-2">
-                                                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                                                        <Link to ={"edituser/" + user.id}>
+                                                        <button className=' btn profile-edit-btn ms-2'><i class="fa solid fa-pen me-2"></i>Edit Profile</button>
+                                                        </Link>
+                                                       
                                                     </div>
+
+                                                 
+
+
+
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-4">

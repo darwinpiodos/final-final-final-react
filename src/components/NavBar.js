@@ -65,6 +65,13 @@ backgroundImage: "linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%)"}}>
                         <a class="nav-link" href="#">Home</a>
                         </Link>
                         </li>
+                        
+                        <li class="nav-item">
+                        <Link to="/list" style={{textDecoration:'none'}}>
+                        <a class="nav-link" href="#">List</a>
+                        </Link>
+                        </li>
+
                         <li class="nav-item">
                         <Link to="/profile" style={{textDecoration:'none'}}>
                         <a class="nav-link" href="#">Profile</a>

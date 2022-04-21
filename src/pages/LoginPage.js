@@ -50,17 +50,19 @@ function LoginPage()
             button: "Proceed to Profile",
           }).then(function() {
             window.location = "/profile";
-        });
+        })
     }
     else{
+
         swal({
-            title: "Congratulations!",
-            text: "Login Successful",
+            title: "Oops!",
+            text: "Login Unsuccessful",
             icon: "warning",
-            button: "Proceed to Profile",
+            button: "Okay",
           }).then(function() {
             window.location = "/login";
-        });
+        })
+        
     }
 
 
@@ -75,19 +77,27 @@ function LoginPage()
         <div className='container-fluid m-0 p-0 d-flex flex-column  align-items-center'>
               <NavBar/>
 
-            <div className='container m-5 p-5  sm-w-50 w-80 d-flex flex-column                align-items-center'>
-                    <div className='card col-12 col-sm-12 col-md-12 col-lg-6 p-3'>
-                        <h1 className='mb-3'>Login</h1>
-                        <div className='form-group'>
-                            <input type="text" onChange={(e)=>setEmail(e.target.value)} placeholder="enter email" className='form-control fs-6 p-2 mb-3'></input>
-                        </div>
+            <div className='container-fluid mt-5 pt-5  sm-w-50 w-100  d-flex flex-column align-items-center'>
+                    <div className='card col-12 col-sm-12 col-md-12 col-lg-5 p-4'>
+                        <h4 className='mb-3'>Login</h4>
+
+                      
+
+                            <div class="form-floating mb-3">
+                                <input type="email" onChange={(e)=>setEmail(e.target.value)}   className="form-control  fs-6 p-2 mb-3 pt-4" id="floatingInput" placeholder="name@example.com"/>
+                                <label for="floatingInput ">Email address</label>
+                            </div>
+
+                            <div class="form-floating">
+                                <input type="password" onChange={(e)=>setPassword(e.target.value)} className="form-control  fs-6 p-2 mb-3 pt-4" id="floatingPassword" placeholder="Password"/>
+                                <label for="floatingPassword">Password</label>
+                            </div>
+
+
+                      
 
                         <div className='form-group'>
-                            <input type="password"  onChange={(e)=>setPassword(e.target.value)}  placeholder="enter password" className='form-control fs-6 p-2 mb-3'></input>
-                        </div>
-
-                        <div className='form-group'>
-                            <button onClick={login} className='btn btn-primary w-100 fs-6 p-2'>Login</button>
+                            <button onClick={login} className='btn btn-primary w-100 fs-5 p-3'>Login</button>
                         </div>
 
 
