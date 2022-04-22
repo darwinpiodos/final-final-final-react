@@ -1,6 +1,7 @@
 import {useHistory} from 'react-router-dom'; 
 import React, {useState, useEffect} from 'react';
 import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 import swal from 'sweetalert';
 window.swal = swal;
 
@@ -77,7 +78,7 @@ function LoginPage()
         <div className='container-fluid m-0 p-0 d-flex flex-column  align-items-center'>
               <NavBar/>
 
-            <div className='container-fluid mt-5 pt-5  sm-w-50 w-100  d-flex flex-column align-items-center'>
+            <div className='container-fluid mt-5 mb-5 pt-5  sm-w-50 w-100  d-flex flex-column align-items-center'>
                     <div className='card col-10 col-sm-12 col-md-10 col-lg-5 p-4'>
 
                         
@@ -110,6 +111,8 @@ function LoginPage()
                     </div>
 
             </div>
+
+            <Footer/>
         </div>
     )
 }

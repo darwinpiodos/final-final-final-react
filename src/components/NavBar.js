@@ -104,7 +104,7 @@ function NavBar()
                         <li>
                         <Navbar>
                             <Nav className="NavBar">
-                                <NavDropdown title={user && user.firstname} className="btn simple-button" style={{color:"white"}}>
+                                <NavDropdown title={user && user.firstname} className="btn simple-button">
                                 <NavDropdown.Item className="dropdown-item" onClick={logOut}>Logout</NavDropdown.Item>
                                 <NavDropdown.Item className="dropdown-item" onClick={profile}>Profile</NavDropdown.Item>
                                 </NavDropdown>

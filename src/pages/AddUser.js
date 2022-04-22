@@ -206,7 +206,7 @@ function AddUser() {
 
 
                         <div className='form-group mt-4'>
-                                <button  onClick={signUp}  className='btn w-100 fs-5 p-3 mt-2' style={{ backgroundColor: "#abe9cd", backgroundImage: "linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%)", color:"white"}}>Register</button>
+                                <button  onClick={signUp}  className='btn w-100 fs-5 p-3 mt-2' style={{ backgroundColor: "#abe9cd", backgroundImage: "linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%)", color:"white"}}>Add</button>
                         </div>
 
 

@@ -92,7 +92,7 @@ class EditUser extends Component
                 icon: "success",
                 button: "Proceed to Profile",
               }).then(function() {
-                window.location = "/profile";
+                window.location = `/edituser/${user_id}`;
             });
 
 
