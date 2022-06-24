@@ -22,7 +22,6 @@ function App() {
             <Route  path="/add" component={AddUser}></Route>
             <Route  path="/edituser/:id" component={EditUser}></Route>
             
-            
           </Switch>
          </BrowserRouter>
     </div>

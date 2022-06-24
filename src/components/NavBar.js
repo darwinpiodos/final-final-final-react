@@ -7,6 +7,9 @@ import userEvent from '@testing-library/user-event';
 import '../css/NavBar.css';
 
 
+
+
+
 function NavBar()
 {
 
@@ -40,12 +43,13 @@ function NavBar()
 
             
                 <div class="container-fluid p-3" >
-                <Link to="/"><a class="navbar-brand" href="#"><img className="mlg-logo" src={mlglogo}/></a>
-                </Link>
+                <a class="navbar-brand" href="/"><img className="mlg-logo" src={mlglogo}/></a>
+               
 
-                    <Link to="/" className="mlg-name" >
-                    <a class="navbar-brand logo-name" style={{color:"#485356  "}}  href="#">MLGCL<br></br><span className="covid-name">COVID-19 CONTACT TRACING SYSTEM</span></a>
-                    </Link>
+                  
+                        
+                    <a class="navbar-brand logo-name" style={{color:"#485356  "}}  href="/">MLGCL<br></br><span className="covid-name">COVID-19 CONTACT TRACING SYSTEM</span></a>
+                  
 
                     
 
@@ -61,35 +65,26 @@ function NavBar()
                     localStorage.getItem('user-info') ?
                     <>
                         <li class="nav-item">
-                        <Link to="/" style={{textDecoration:'none'}}>
-                        <a class="nav-link" href="#">Home</a>
-                        </Link>
+                        <a class="nav-link" href="/">Home</a>
+                      
                         </li>
                         
                         <li class="nav-item">
-                        <Link to="/list" style={{textDecoration:'none'}}>
-                        <a class="nav-link" href="#">List</a>
-                        </Link>
+                        <a class="nav-link" href="/list">List</a>
                         </li>
 
                         <li class="nav-item">
-                        <Link to="/profile" style={{textDecoration:'none'}}>
-                        <a class="nav-link" href="#">Profile</a>
-                        </Link>
+                        <a class="nav-link" href="/profile">Profile</a>
                         </li>
                     </>
                     :
                     <>
 
                         <li class="nav-item" style={{textDecoration:'none'}}>
-                        <Link to="/login" style={{textDecoration:'none'}}>
-                        <a class="nav-link" href="#">Login</a>
-                        </Link>
+                        <a class="nav-link" href="/login">Login</a>
                         </li>
                         <li class="nav-item">
-                        <Link to="/register" style={{textDecoration:'none'}}>
-                        <a class="nav-link" href="#">Register</a>
-                        </Link>
+                        <a class="nav-link" href="/register">Register</a>
                         </li>
 
                     </>
@@ -110,6 +105,10 @@ function NavBar()
                                 </NavDropdown>
                             </Nav>
                         </Navbar>
+
+                               
+
+
                         </li>
 
 

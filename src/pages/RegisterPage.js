@@ -59,8 +59,6 @@ function RegisterPage() {
             method: 'POST',
             body: formData
           
-           
-            
         });
 
         if(result){

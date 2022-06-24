@@ -150,8 +150,6 @@ class EditUser extends Component
                             </div>
 
 
-
-
                             <h6 className='pt-3 ms-2'>Birthday </h6>
                             <div className='d-flex'> 
 
@@ -171,9 +169,6 @@ class EditUser extends Component
                                 </div>
                             
                             </div> 
-
-
-
 
                            
                             <div class="form-floating mb-3">
