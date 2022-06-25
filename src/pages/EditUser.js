@@ -109,7 +109,9 @@ class EditUser extends Component
             <div className='container-fluid m-0 p-0'>
                 <NavBar/>
                 <div className='container w-100 pt-5 mt-5 d-flex align-items-center justify-content-center'>
-                <div className='card w-50 p-3'>
+
+
+                <div className='card w-50 p-3 width-cardd' >
                     
                         <h4 className='pt-3 ms-3'>Edit User <i class="fa solid fa-pen ms-2"></i></h4>
                    

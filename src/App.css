@@ -94,3 +94,16 @@ padding-top: 3%;;
 
 
 /* ListPage */
+
+
+
+
+@media screen and (max-width: 560px) {
+
+
+.width-cardd{
+  width: 450px !important;
+}
+  }
+  
+  

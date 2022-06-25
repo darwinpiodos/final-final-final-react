@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { useHistory,useLocation } from 'react-router-dom';
 import swal from 'sweetalert';
+import '../App.css';
 window.swal = swal;
 
 function AddUser() {
@@ -99,7 +100,7 @@ function AddUser() {
         <div className="container-fluid m-0 p-0 d-flex flex-column justify-content-center align-items-center">
             <NavBar />
             <div className="container d-flex flex-column justify-content-center align-items-center">
-                <div className="card m-5 w-50" >
+                <div className="card m-5 w-50 width-cardd" >
 
 
                     
