@@ -23,13 +23,17 @@ function NavBar()
     {
         localStorage.clear();
         history.push('/')
+        window.location = "/";
+
     }
 
+
+    
     function profile()
     {
       
-        history.push('/profile')    
-
+        history.push('/profile')  
+        window.location = "/profile";  
 
     }
 
@@ -37,12 +41,12 @@ function NavBar()
 
     return(
         <div className="container-fluid p-0 m-0 w-100">
-            <nav class="navbar navbar-expand-lg navbar-light p-3 box-shadow w-100" style={{ backgroundColor: "#ffffff",
+            <nav class="navbar navbar-expand-lg navbar-light p-3 box-shadow w-100 " style={{ backgroundColor: "#ffffff",
             backgroundImage: "linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%)"}}>
 
 
             
-                <div class="container-fluid p-3" >
+                <div class="container-fluid p-3 " >
                 <a class="navbar-brand" href="/"><img className="mlg-logo" src={mlglogo}/></a>
                
 
@@ -53,11 +57,14 @@ function NavBar()
 
                     
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse links-right" id="navbarNav">
-                    <ul class="navbar-nav align-button" style={{position:"absolute", right:"10px",padding:"20px", display:"flex"}}>
+
+
+                    <div class="collapse navbar-collapse links-right " id="navbarNav">
+                    <ul class="navbar-nav align-button nav-bar-container " style={{position:"absolute", right:"10px",padding:"20px", display:"flex"}}>
                        
 
                       
@@ -97,11 +104,12 @@ function NavBar()
                         localStorage.getItem('user-info') ?    
                     
                         <li>
-                        <Navbar>
+                        <Navbar >
                             <Nav className="NavBar">
                                 <NavDropdown title={user && user.firstname} className="btn simple-button">
-                                <NavDropdown.Item className="dropdown-item" onClick={logOut}>Logout</NavDropdown.Item>
                                 <NavDropdown.Item className="dropdown-item" onClick={profile}>Profile</NavDropdown.Item>
+                                <NavDropdown.Item className="dropdown-item" onClick={logOut}>Logout</NavDropdown.Item>
+                               
                                 </NavDropdown>
                             </Nav>
                         </Navbar>

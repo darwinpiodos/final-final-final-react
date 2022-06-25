@@ -153,6 +153,22 @@ body{
     text-align: center;
     padding: 7px;
 }
+.dropdown-item:hover{
+    font-size: 12px;
+    text-align: center;
+    padding: 7px;
+    background-color: rgb(237, 237, 237);
+}
+
+.dropdown-item:active{
+    font-size: 12px;
+    text-align: center;
+    padding: 7px;
+    background-color: rgb(198, 198, 198);
+    color: black;
+    font-weight: bold;
+}
+
 
 
 .list-edit-button{

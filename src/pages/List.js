@@ -3,12 +3,33 @@ import Footer from "../components/Footer";
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import '../css/ProfileCSS.css';
+import {useHistory, useLocation} from 'react-router-dom';
 
 
 function List()
 {
 
+    const history=useHistory();
 
+
+    function adduser()
+    {
+     
+        history.push("/add")
+        window.location = "/add";
+
+    }
+
+
+ 
+
+
+
+
+
+
+
+    
     const [data,setData]=useState([]);
     useEffect (  ()=>{
        getData();
@@ -40,7 +61,9 @@ function List()
                     <div className="card">
                         <div className="card-header d-flex align-item-center p-4">
                             <h4 className="">User list</h4>
-                            <Link to="/add">
+
+
+                            <Link  onClick={adduser}>
                             <button className="btn profile-edit-btn ms-4"><i class="fa solid fa-plus me-2"></i>Add User</button>
                             </Link>
 

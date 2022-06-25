@@ -1,0 +1,90 @@
+
+
+
+@media screen and (max-width: 560px) {
+   
+    .homepage-container{
+        display: flex;
+        flex-direction: column;
+      
+    }
+    .welcome-mlgcl{
+        font-size: 45px;
+        background-color: none;
+        margin-left: -90px;
+        text-align: center;
+    
+    }
+    .mlgcl-covid-details{
+        text-align: center;
+        margin-left: -90px;
+        padding: 40px;
+        padding-bottom: 5px;
+        padding-top: 10px;
+    }
+
+    .inside-container{
+        padding-top: 5px;
+    }
+
+    .id-like{
+        font-size: 20px;
+        margin-left: -95px;
+        text-align: center;
+    }
+
+
+    .button-login{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: -90px;
+
+    }
+
+    .button-edit-individual{
+        padding: 12px 170px;
+        margin: 8px;
+        margin-left: 15px;
+
+    }
+
+    .button-edit-admin{
+        padding: 12px 181px;
+        margin: 8px;
+      
+
+    }
+
+    .button-edit-individual:hover{
+        padding: 12px 170px;
+        margin: 8px;
+        margin-left: 15px;
+
+    }
+
+    .button-edit-admin:hover{
+        padding: 12px 181px;
+        margin: 8px;
+      
+
+    }
+
+    .center-account{
+        text-align: center;
+        margin-left: -90px;
+    }
+
+    .image-covid{
+        width: 100%;
+        margin-left: -20px;
+    }
+
+
+    .image-cov{
+        width: 400px;
+        margin-top: -50px;
+    }
+
+
+}

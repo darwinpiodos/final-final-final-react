@@ -24,6 +24,9 @@ function AddUser() {
     const [address, setAddress] = useState("")
     const [phone, setPhone] = useState("")
     const [image, setImage] = useState("")
+
+
+
   
 
     async function signUp() {
@@ -97,9 +100,19 @@ function AddUser() {
             <NavBar />
             <div className="container d-flex flex-column justify-content-center align-items-center">
                 <div className="card m-5 w-50" >
+
+
+                    
                     <div className="card-header" style={{backgroundColor: "#abe9cd", backgroundImage:" linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%)"}}>
                         <h4 className='p-3'>Add User <i class="fa solid fa-plus ms-2"></i></h4>
                     </div>
+
+
+
+
+
+
+
                     <div className="card-body">
 
                     <h5 className='mb-1 ms-3 mt-4 '>Basic Information</h5>

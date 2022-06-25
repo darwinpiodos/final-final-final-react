@@ -6,6 +6,7 @@ import doh from '../images/doh-logo.png';
 import leyte from '../images/leyte-logo.png';
 import hilongos from '../images/hilongos-logo.png';
 import '../App.css';
+import '../css/FooterNew.css';
 
 function Footer()
 {
@@ -15,7 +16,8 @@ function Footer()
             <div className="row w-100 footer-main">
                 
                 
-                <div className="col-lg-6 col-center">
+                <div className="col-lg-6 col-center first-layer">
+
                     <ul className="ul-tag ul-center">
 
                         <li>
@@ -29,18 +31,19 @@ function Footer()
                         </li>
 
                     </ul>
+
                 </div>
 
 
-                <div className="col d-flex ms-5 ">
+                <div className="col d-flex ms-5 second-layer">
                     <ul className="ul-tag ul-center">
                         <li>
                             <p style={{fontSize:11}}>powered by</p>
-                            <img style={{width:160, position:"relative",left:"0px",paddingTop:0}}src={piodox} />
+                            <img style={{width:160, position:"relative",left:"0px",paddingTop:0}}src={piodox}  className="piodos-logo-text"/>
                         </li>
                     </ul>
 
-                    <ul className="ul-tag ul-center">
+                    <ul className="ul-tag ul-center last-layer">
                         <li>
                             <p style={{fontSize:11}}>in partnership with</p>
                             <div className="d-flex">

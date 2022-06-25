@@ -12,6 +12,33 @@ function ProfilePage()
     let user= JSON.parse(localStorage.getItem('user-info'))
     const history=useHistory();
 
+
+
+
+    
+
+    function edituser()
+    {
+     
+        history.push("/edituser/"+ user.id)
+        window.location = "/edituser/"+ user.id;
+
+    }
+
+
+
+
+
+
+
+    // <Link to ={"edituser/" + user.id}>
+    // <button className=' btn profile-edit-btn ms-2'><i class="fa solid fa-pen me-2"></i>Edit Profile</button>
+    // </Link>
+
+
+
+                                                      
+
    
   
     return(
@@ -89,17 +116,30 @@ function ProfilePage()
                                                     </div>
 
 
+
+
                                                     <div class="col-md-2">
-                                                        <Link to ={"edituser/" + user.id}>
+
+
+                                                        {/* <Link to ={"edituser/" + user.id}>
+                                                        <button className=' btn profile-edit-btn ms-2'><i class="fa solid fa-pen me-2"></i>Edit Profile</button>
+                                                        </Link> */}
+
+
+
+                                                       
+
+                                                        <Link onClick={edituser}>
                                                         <button className=' btn profile-edit-btn ms-2'><i class="fa solid fa-pen me-2"></i>Edit Profile</button>
                                                         </Link>
-                                                       
+
+
+
+
+
                                                     </div>
 
                                                  
-
-
-
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-4">
