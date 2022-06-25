@@ -9,7 +9,7 @@ import swal from 'sweetalert';
 window.swal = swal;
 
 
-class EditUser extends Component
+class EditUserList extends Component
 {
 
     state = {
@@ -90,9 +90,9 @@ class EditUser extends Component
                 title: "Congratulations!",
                 text: "Updated Successfully",
                 icon: "success",
-                button: "Proceed to Profile",
+                button: "Proceed to User List",
               }).then(function() {
-                window.location = `/profile`;
+                window.location = `/list`;
             });
 
 
@@ -207,4 +207,4 @@ class EditUser extends Component
 
 }
 
-export default EditUser;
+export default EditUserList;

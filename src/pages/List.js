@@ -4,10 +4,42 @@ import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import '../css/ProfileCSS.css';
 import {useHistory, useLocation} from 'react-router-dom';
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css';
+import Swal from 'sweetalert2';
+
 
 
 function List()
 {
+
+
+
+
+
+
+  
+
+    // const submit = () => {
+
+    //     confirmAlert({
+    //       title: 'Confirm to submit',
+    //       message: 'Are you sure to do this.',
+    //       buttons: [
+    //         {
+    //           label: 'Yes',
+    //           onClick: () => alert('Click Yes')
+    //         },
+    //         {
+    //           label: 'No',
+    //           onClick: () => alert('Click No')
+    //         }
+    //       ]
+    //     });
+
+
+    // }
+
 
     const history=useHistory();
 
@@ -25,19 +57,32 @@ function List()
 
 
 
+  
 
-
-
-
-    
     const [data,setData]=useState([]);
     useEffect (  ()=>{
        getData();
     },[])
    
 
-    async function deleteOperation(id)
-    {
+
+
+    // async function deleteOperation(id)
+    // {
+    //     let result= await fetch("http://localhost:8000/api/delete/" +id,{
+    //         method:'DELETE'
+    //     });
+
+    //     result = await  result .json();
+    //     console.warn(result);
+    //     getData(); 
+    // }
+
+
+
+
+    async function deleteprompt(id){
+
         let result= await fetch("http://localhost:8000/api/delete/" +id,{
             method:'DELETE'
         });
@@ -45,7 +90,27 @@ function List()
         result = await  result .json();
         console.warn(result);
         getData(); 
+
+
+  
+
+              Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+              )
+        
+
     }
+  
+
+    // <button onClick={()=>deleteOperation(item.id)} 
+    // className='btn list-delete-button'>
+    // <i class="fa solid fa-trash me-2"></i></button>
+
+
+
+
 
     async function getData(){
         let result= await fetch("http://localhost:8000/api/list");
@@ -54,8 +119,22 @@ function List()
 
     }
 
+
+
+
+
+
     return(
         <div className="container-fluid m-0 p-0">
+
+
+        {/* <div className='container'>
+        <button onClick={submit}>Confirm dialog</button>
+      </div> */}
+
+
+
+
             <NavBar/>
                 <div className="container-fluid p-5">
                     <div className="card">
@@ -105,13 +184,49 @@ function List()
                             <td><img style={{width:80,height:80}} src={"http://localhost:8000/" + item.image} /></td>
 
                             <td className="float">
-                                <button onClick={()=>deleteOperation(item.id)} className='btn list-delete-button'><i class="fa solid fa-trash me-2"></i></button>
+
+
+                                
+{/*                                 
+                            <button onClick={()=>deleteOperation(item.id)} 
+                                className='btn list-delete-button'>
+                                <i class="fa solid fa-trash me-2"></i></button> */}
+
+
+
+
+                                       
+                            <button onClick={()=>deleteprompt(item.id)} 
+                                className='btn list-delete-button'>
+                                <i class="fa solid fa-trash me-2"></i></button>
+
+
+
+
+
 
                                 
 
-                                <Link to ={"edituser/" + item.id}>
+                                {/* <Link to ={"edituser/" + item.id}>
                                     <button className=' btn list-edit-button ms-3'><i class="fa solid fa-pen me-2"></i></button>
-                                </Link>
+                                </Link> */}
+
+
+
+                                <a href={"edituserlist/" + item.id}> <button className=' btn list-edit-button ms-3'><i class="fa solid fa-pen me-2"></i></button></a>
+
+
+
+
+                                {/* <Link onClick={edituser}>
+                                    <button className=' btn list-edit-button ms-3'><i class="fa solid fa-pen me-2"></i></button>
+                                </Link> */}
+
+
+
+
+
+                                
 
                             </td>
 

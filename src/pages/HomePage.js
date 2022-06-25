@@ -1,14 +1,30 @@
 import React from "react";
 import NavBar from "../components/NavBar";
 import Contact from "../images/contact-tracing.gif";
+import PlayButton from "../images/playbutton.gif";
 import Footer from "../components/Footer";
 import{Link} from 'react-router-dom';
 import '../css/NavBar.css';
 import '../css/HomePageResponsive.css';
 import {useHistory, useLocation} from 'react-router-dom';
+import {Modal, Button} from 'react-bootstrap';
+
+import  { useState } from 'react';
+
 
 function HomePage()
 {
+
+
+
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+  
+
+    
+
 
 
     const history=useHistory();
@@ -54,14 +70,29 @@ function HomePage()
       }
 
 
+
+
+
+      function displayplaybutton() {
+        document.getElementById("play-button").style.display ="block";
+        document.getElementById("image-cov").style.opacity =0.3;
+        // document.getElementById("logincontainer").style.display ="none";
+      }
+
     
+
+
+
+
     return(
         <div className="container-fluid p-0 m-0">
             <NavBar />
+
+
             <div className="row p-5 homepage-container">
 
                 <div className="col d-flex flex-column justify-content-center ms-5 mt-5 inside-container">
-                    <h1 className="display-5 welcome-mlgcl">
+                    <h1 className="display-5  welcome-mlgcl">
                         Welcome to MLGCL COVID-19 Contact Tracing System!
                     </h1>
 
@@ -133,9 +164,34 @@ function HomePage()
     
                     </div>
                         <div className="col mt-5 pt-5 overflow image-covid">
-                        <img src={Contact} className="image-cov"/>
+
+
+                        <img onClick={handleShow} onMouseOver={displayplaybutton} src={Contact} className="image-cov" id="image-cov"/>
+
+
+                        <img onClick={handleShow}  src={PlayButton} className="play-button" id="play-button"/>
+
                     </div>
             </div>
+
+
+
+
+
+
+            <>
+    
+
+      <Modal className="darwin" show={show} onHide={handleClose} keyboard="False" centered size="lg">
+        <iframe class="iframe-video"width="800" height="470" src="https://www.youtube.com/embed/uaclvunMMcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </Modal>
+    </>
+  
+  
+
+
+
+
 
             <Footer />
 

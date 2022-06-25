@@ -7,6 +7,7 @@ import ProfilePage from './pages/ProfilePage';
 import List from './pages/List';
 import AddUser from './pages/AddUser';
 import EditUser from './pages/EditUser';
+import EditUserList from './pages/EditUserList';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
             <Route  path="/list" component={List}></Route>
             <Route  path="/add" component={AddUser}></Route>
             <Route  path="/edituser/:id" component={EditUser}></Route>
+
+            <Route  path="/edituserlist/:id" component={EditUserList}></Route>
             
           </Switch>
          </BrowserRouter>

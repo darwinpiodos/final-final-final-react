@@ -27,6 +27,32 @@ body{
   }
 
 
+
+  .swal-button {  
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    background-image: linear-gradient(to right,#526bf4,#3ec7e0);
+    cursor: pointer;
+    border-radius: 100px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    height: 36px;
+    line-height: 36px;
+    padding:0 30px;
+    font-size: 14px; 
+  }  
+
+  .swal-button:hover{
+    color: whitesmoke;
+    background-image: linear-gradient(to right,#3ec7e0,#526bf4);
+  }
+
+
+
+
   @media screen and (max-width: 480px) {
    .ul-center{
     display: flex;

@@ -1,5 +1,87 @@
 
 
+.center_frame{
+margin: 0 auto;
+width: 200px;
+}
+
+.image-cov:hover{
+cursor: pointer;
+}
+
+
+.image-cov:hover .play-button{
+    cursor: pointer;
+    display: block;
+    }
+
+    .play-button{
+        width: 200px;
+        position: absolute;
+        right: 320px;
+        top: 350px;
+        display: none;
+        cursor: pointer;
+        opacity: 0.8;
+        }
+        
+
+
+.darwin{
+    margin-left: -0px;
+}
+.welcome-mlgcl{
+    margin-top: 70px;
+    font-weight:600;
+}
+
+.id-like{
+    font-size: 23px;
+    font-weight: 600;
+   
+} 
+
+.mlgcl-covid-details{
+   font-size: 18px;
+}
+
+
+
+.button-edit-individual{
+    padding: 12px 70px;
+    margin-top: 10px;
+   
+
+
+}
+
+.button-edit-admin{
+    padding: 12px 70px;
+    margin-top: 10px;
+ 
+  
+
+}
+
+.button-edit-individual:hover{
+    padding: 12px 70px;
+    margin-top: 10px;
+
+
+
+}
+
+.button-edit-admin:hover{
+    padding: 12px 70px;
+    margin-top: 10px;
+  
+  
+
+}
+
+
+
+
 
 @media screen and (max-width: 560px) {
    
@@ -13,6 +95,7 @@
         background-color: none;
         margin-left: -90px;
         text-align: center;
+       
     
     }
     .mlgcl-covid-details{
@@ -46,12 +129,14 @@
         padding: 12px 170px;
         margin: 8px;
         margin-left: 15px;
+        margin-bottom: 20px;
 
     }
 
     .button-edit-admin{
         padding: 12px 181px;
         margin: 8px;
+        margin-bottom: 20px;
       
 
     }
@@ -60,12 +145,14 @@
         padding: 12px 170px;
         margin: 8px;
         margin-left: 15px;
+        margin-bottom: 20px;
 
     }
 
     .button-edit-admin:hover{
         padding: 12px 181px;
         margin: 8px;
+        margin-bottom: 20px;
       
 
     }
@@ -86,5 +173,40 @@
         margin-top: -50px;
     }
 
+    .play-button{
+        width: 90px;
+        position: absolute;
+        right: 225px;
+        top: 165px;
+        display: block;
+        cursor: pointer;
+        opacity: 0.8;
+        }
+        
+
+        
+.darwin{
+    width: 85%;
+    display: flex;
+ margin-left: 40px;
+}
+.iframe-video{
+    width: 100%;
+}
+
+
+
 
 }
+
+
+
+@media screen and (max-width: 991.5px) {
+
+
+    .play-button{
+      display: none;
+        }
+  
+  
+  }
