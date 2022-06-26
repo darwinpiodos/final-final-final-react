@@ -166,13 +166,14 @@ function HomePage()
                         <div className="col mt-5 pt-5 overflow image-covid">
 
 
-                        <img onClick={handleShow} onMouseOver={displayplaybutton} src={Contact} className="image-cov" id="image-cov"/>
+                        <img onClick={handleShow}   src={Contact} className="image-cov" id="image-cov"/>
 
+                        <p  onClick={handleShow}  className="text-center fs-7 font-italic how-does"> <i class="fa solid fa-play color-button" ></i> How does contact tracing works?</p>
 
-                        <img onClick={handleShow}  src={PlayButton} className="play-button" id="play-button"/>
+                        <img   onClick={handleShow}  src={PlayButton} className="play-button" id="play-button"/>
 
+                         </div>
                     </div>
-            </div>
 
 
 

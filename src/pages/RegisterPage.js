@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { useHistory,useLocation } from 'react-router-dom';
 import swal from 'sweetalert';
+import '../css/ProfileCSS.css';
 window.swal = swal;
 
 function RegisterPage() {
@@ -108,7 +109,7 @@ function RegisterPage() {
     return (
         <div className="container-fluid m-0 p-0 d-flex flex-column justify-content-center align-items-center">
             <NavBar />
-            <div className="container mt-5 d-flex flex-column justify-content-center align-items-center">
+            <div className="container mt-5 d-flex flex-column justify-content-center align-items-center register-page">
                 <div className="card m-5 p-4" style={{width:"60%"}} >
                     
                 <h3 className='mb-3 text-center' ><i class="fa solid fa-user pt-3" style={{fontSize:"60px", color:"white", backgroundColor: "#abe9cd", backgroundImage: "linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%)", width:"95px", height:"95px",backgroundPosition:"center center", backgroundSize:"cover" ,textAlign:"center", borderRadius:"50%"}}></i></h3>

@@ -1,3 +1,31 @@
+.color-button{
+
+   color:#DC143C;
+   margin-right: 4px;
+   
+}
+
+.color-button:hover{
+
+    color:#cf052d;
+    margin-right: 4px;
+    
+ }
+
+
+
+
+.how-does{
+    color: #737373;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.how-does:hover{
+    color: #3eadcf;
+
+}
 
 
 .center_frame{
@@ -164,7 +192,7 @@ cursor: pointer;
 
     .image-covid{
         width: 100%;
-        margin-left: -20px;
+        margin-left: 10px;
     }
 
 

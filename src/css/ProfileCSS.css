@@ -237,3 +237,20 @@ body{
     box-shadow: inset 0px 3px 7px #d6d6e7;
     transform: translateY(2px);
 }
+
+
+
+
+
+@media screen and (max-width: 560px) {
+
+
+    
+.register-page{
+    width: 140%;
+    margin-left: -105px;
+}
+
+
+
+}
